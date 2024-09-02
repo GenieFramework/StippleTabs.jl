@@ -1,0 +1,8 @@
+st-tabs {
+  display: block;
+  background: white;
+}
+
+st-tabs > * {
+  pointer-events: none;
+}

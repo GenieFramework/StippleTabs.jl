@@ -1,0 +1,40 @@
+{
+  "label": "Tab Menu",
+  "gbPluginId": "stippletabs", 
+  "tagName": "ST-TABS",
+  "type": "st-tabs",
+  "icon": "{appPath}/components/tabs/assets/library_icon.png",
+  "category": "Content",
+  "content": "<st-tabs gb_c__ids=\"['one', 'two', 'three']\" gb_c__labels=\"['One', 'Two', 'Three']\" gb_b__v-model=\"\" class=\"bg-primary text-white shadow-2\"></tabs>",
+  "description": "",
+  "isComposite": true,
+  "enabled": true,
+  "hideFromLibrary": false,
+  "draggable": true,
+  "editable": false,
+  "droppable": false,
+  "properties": [
+    {
+      "label": "Selected Id",
+      "name": "v-model",
+      "desc": "Id of the selected tab",
+      "enabled": true,
+      "type": ["String"]
+    }, 
+    
+    {
+        "label": "Ids",
+        "name": "ids",
+        "desc": "Array of tab ids",
+        "enabled": true,
+        "type": ["Array"]
+    }, 
+    {
+        "label": "Labels",
+        "desc": "Array of tab labels",
+        "name": "labels",
+        "enabled": true,
+        "type": ["Array"]
+    }
+  ]    
+}
