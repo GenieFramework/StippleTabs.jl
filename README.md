@@ -1,4 +1,4 @@
-# StippleTabs
+# StippleTabs.jl
 
-This component implements a Tabs menu
+Alternative UI tabs component for Stipple/StippleUI. 
  
