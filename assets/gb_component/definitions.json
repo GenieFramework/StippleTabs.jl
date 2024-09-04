@@ -5,7 +5,7 @@
   "type": "st-tabs",
   "icon": "{appPath}/components/tabs/assets/library_icon.png",
   "category": "Content",
-  "content": "<st-tabs gb_c__ids=\"['one', 'two', 'three']\" gb_c__labels=\"['One', 'Two', 'Three']\" gb_b__v-model=\"\" class=\"bg-primary text-white shadow-2\"></tabs>",
+  "content": "<st-tabs gb_c__ids=\"['one', 'two', 'three']\" gb_c__labels=\"['One', 'Two', 'Three']\" gb_b__v-model=\"undefined\" class=\"bg-primary text-white shadow-2\"></tabs>",
   "description": "",
   "isComposite": true,
   "enabled": true,
