@@ -1,5 +1,6 @@
 # StippleTabs.jl
 
+Alternative UI tabs component for Stipple/StippleUI.
 This component wraps Quasar's Q-Tabs component for Genie Builder compatibility.
 
 ## Installation
