@@ -2,6 +2,7 @@
 
 Alternative UI tabs component for Stipple/StippleUI.
 This component wraps Quasar's Q-Tabs component for Genie Builder compatibility.
+Use it in combination with q-tab-panels and q-tab-panel to switch displayed content.
 
 ## Installation
 
@@ -32,6 +33,20 @@ end
 
 ui() = """
 <st-tabs v-model="selected_tab" :ids="tab_ids" :labels="tab_labels" />
+
+<q-tab-panels v-model="selected_tab">
+    <q-tab-panel name="tab_1">
+        Tab 1 Contents
+    </q-tab-panel>
+
+    <q-tab-panel name="tab_2">
+        Tab 2 Contents
+    </q-tab-panel>
+
+    <q-tab-panel name="tab_3">
+        Tab 3 Contents
+    </q-tab-panel>
+</q-tab-panels>
 """
 
 @page("/", ui)
