@@ -8,11 +8,11 @@ const assets_config = Genie.Assets.AssetsConfig(package="StippleTabs.jl")
 
 import Stipple.Genie.Renderer.Html: register_normal_element, normal_element
 
-register_normal_element("st__tabs", context=@__MODULE__)
+register_normal_element("st__tabs", context = @__MODULE__)
 
 
-function tabs(;kwargs...)
-    st_tabs(;kw([kwargs...])...)
+function tabs(args...; kwargs...)
+    st__tabs(args...; kw(kwargs)...)
 end
 
 function gb_component_routes()
@@ -29,18 +29,18 @@ function gb_component_routes()
     Genie.Router.route(Genie.Assets.asset_route(
         assets_config,
         "", # type
-        file="definitions.json",
-        path=assets_folder_path,
-        prefix=prefix,
-        ext=""
+        file = "definitions.json",
+        path = assets_folder_path,
+        prefix = prefix,
+        ext = ""
     ),
-    named=:get_gb_component_stippletabs_definitionsjson) do
+    named = :get_gb_component_stippletabs_definitionsjson) do
         Genie.Renderer.WebRenderable(
             Genie.Assets.embedded(
-                Genie.Assets.asset_file(cwd=normpath(joinpath(@__DIR__, "..")),
-                file="definitions.json",
-                path=gb_component_path,
-                type="")
+                Genie.Assets.asset_file(cwd = normpath(joinpath(@__DIR__, "..")),
+                file = "definitions.json",
+                path = gb_component_path,
+                type = "")
             ),
             :json) |> Genie.Renderer.respond
     end
@@ -48,18 +48,18 @@ function gb_component_routes()
     Genie.Router.route(Genie.Assets.asset_route(
         assets_config,
         "", # type
-        file="canvas.css",
-        path=assets_folder_path,
-        prefix=prefix,
-        ext=""
+        file = "canvas.css",
+        path = assets_folder_path,
+        prefix = prefix,
+        ext = ""
     ),
-    named=:get_gb_component_stippletabs_canvascss) do
+    named = :get_gb_component_stippletabs_canvascss) do
         Genie.Renderer.WebRenderable(
             Genie.Assets.embedded(
-                Genie.Assets.asset_file(cwd=normpath(joinpath(@__DIR__, "..")),
-                file="canvas.css",
-                path=gb_component_path,
-                type="")
+                Genie.Assets.asset_file(cwd = normpath(joinpath(@__DIR__, "..")),
+                file = "canvas.css",
+                path = gb_component_path,
+                type = "")
             ),
             :css) |> Genie.Renderer.respond
     end
@@ -67,19 +67,19 @@ function gb_component_routes()
     Genie.Router.route(Genie.Assets.asset_route(
         assets_config,
         "", # type
-        file="library_icon.png",
-        path="$assets_folder_path/$icons_folder_path",
-        prefix=prefix,
-        ext=""
+        file = "library_icon.png",
+        path = "$assets_folder_path/$icons_folder_path",
+        prefix = prefix,
+        ext = ""
     ),
 
     named=:get_gb_component_stippletabs_icons_stippletabs) do
         Genie.Renderer.WebRenderable(
             Genie.Assets.embedded(
-                Genie.Assets.asset_file(cwd=normpath(joinpath(@__DIR__, "..")),
-                file="library_icon.png",
-                path=joinpath(gb_component_path, icons_folder_path),
-                type="")
+                Genie.Assets.asset_file(cwd = normpath(joinpath(@__DIR__, "..")),
+                file = "library_icon.png",
+                path = joinpath(gb_component_path, icons_folder_path),
+                type = "")
             ),
             :png) |> Genie.Renderer.respond
     end
