@@ -122,6 +122,7 @@ function __init__()
     deps_routes()
     Stipple.add_css(css_deps)
     Stipple.deps!(@__MODULE__, deps)
+    isdefined(Stipple, :register_global_components) && Stipple.register_global_components("st-tabs", legacy = true)
 end
 
 end
