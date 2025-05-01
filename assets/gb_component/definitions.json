@@ -20,21 +20,35 @@
       "desc": "Id of the selected tab",
       "enabled": true,
       "type": ["String"]
-    }, 
-    
+    },
     {
-        "label": "Ids",
-        "name": "ids",
-        "desc": "Array of tab ids",
-        "enabled": true,
-        "type": ["Array"]
-    }, 
+      "label": "Ids",
+      "name": "ids",
+      "desc": "Array of tab ids",
+      "enabled": true,
+      "type": ["Array"]
+    },
     {
-        "label": "Labels",
-        "desc": "Array of tab labels",
-        "name": "labels",
-        "enabled": true,
-        "type": ["Array"]
+      "label": "Labels",
+      "desc": "Array of tab labels",
+      "name": "labels",
+      "enabled": true,
+      "type": ["Array"]
+    },
+    {
+      "label": "Icons",
+      "desc": "Array of tab icons",
+      "name": "icons",
+      "enabled": true,
+      "type": ["Array"]
+    },
+    {
+      "label": "Vertical",
+      "name": "vertical",
+      "desc": "Use vertical design (tabs one on top of each other rather than one next to the other horizontally)",
+      "enabled": true,
+      "type": ["Boolean"], 
+      "default": false
     }
-  ]    
+  ]
 }
